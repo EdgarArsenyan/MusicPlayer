@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/green_new"
+    >
+
+    <FrameLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/black"
+        android:alpha="0.6"
+        app:layout_constraintBottom_toTopOf="@id/imageview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/song_list"
+        android:layout_width="match_parent"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/green_mini"
+        android:layout_height="448dp"
+
+        android:theme="@style/AlertDialog.AppCompat.Light"
+        app:layout_constraintBottom_toTopOf="@id/seekLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/panel" />
+
+    <LinearLayout
+        android:id="@+id/seekLayout"
+        android:layout_width="383dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@id/song_list"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="14dp"
+        android:alpha="0.8"
+        android:background="@android:color/black"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/song_list">
+
+        <TextView
+            android:id="@+id/item_text"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginTop="8dp"
+            android:background="#AEEA00"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/songProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="14dp"
+            android:progressBackgroundTint="#003000" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toolLayout"
+        android:layout_width="match_parent"
+        android:background="@android:color/black"
+        android:alpha="0.8"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       >
+
+
+        <Button
+            android:id="@+id/previu"
+            android:layout_marginEnd="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/backward"
+
+            />
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="@drawable/play" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_marginStart="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/next"
+            android:backgroundTintMode="src_atop"
+            />
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

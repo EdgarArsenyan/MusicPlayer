@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/green">
+
+    <FrameLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@id/imageview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="492dp"
+        app:layout_constraintBottom_toTopOf="@id/seekLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/panel" />
+
+    <LinearLayout
+        android:id="@+id/seekLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignTop="@id/imageview"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toTopOf="@id/toolLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageview">
+
+        <SeekBar
+            android:id="@+id/songProgressBar"
+            android:layout_width="fill_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/black"
+            android:progressDrawable="@color/colorPrimaryDark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:text="my song "/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toolLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="26dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekLayout">
+
+        <Button
+            android:id="@+id/previu"
+            android:layout_marginEnd="40dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/backward"
+
+            />
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/play" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_marginStart="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/next" />
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
